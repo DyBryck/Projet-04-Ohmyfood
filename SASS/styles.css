@@ -13,20 +13,21 @@
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+img {
+  width: 30%;
+}
+
 body {
-  max-width: 767px;
   margin: 0 auto;
-  padding: 0;
   font-family: "Roboto";
 }
-
-img {
+body__container {
   width: 100%;
+  max-width: 767px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
-  height: 113px;
-}
 .header__logo {
   font-family: "Shrikhand";
   font-size: 30px;
@@ -34,6 +35,8 @@ img {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   padding: 14px 89px 13px 89px;
   margin: 0;
+  position: relative;
+  z-index: 3;
 }
 .header__location {
   display: flex;
@@ -42,7 +45,34 @@ img {
   align-items: center;
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  position: relative;
+  z-index: 2;
 }
-.header__location i {
+.header__location__icon {
   margin-right: 17px;
+}
+
+.explore__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+.explore__section__title {
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 0 30px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.explore__section__caption {
+  text-align: center;
+  margin: 10px 0 27px 0;
+  font-weight: 300;
+}
+.explore__section__button {
+  margin-bottom: 57px;
 }/*# sourceMappingURL=styles.css.map */

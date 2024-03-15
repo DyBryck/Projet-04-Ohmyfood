@@ -1,19 +1,22 @@
 @import "./color", "./button";
 
-body {
-    max-width: 767px;
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Roboto';
+img {
+    width: 30%;
 }
 
-img {
-    width: 100%;
+body {
+    margin: 0 auto;
+    font-family: 'Roboto';
+
+    &__container {
+        width: 100%;
+        max-width: 767px;
+        padding: 0;
+        box-sizing: border-box;
+    }
 }
 
 .header {
-    height: 113px;
-
     &__logo {
         font-family: 'Shrikhand';
         font-size: 30px;
@@ -21,6 +24,8 @@ img {
         box-shadow: 0px 2px 4px 0px #00000026;
         padding: 14px 89px 13px 89px;
         margin: 0;
+        position: relative;
+        z-index: 3;
     }
 
     &__location {
@@ -30,9 +35,39 @@ img {
         align-items: center;
         background-color: #EAEAEA;
         box-shadow: 0px 4px 4px 0px #00000040;
+        position: relative;
+        z-index: 2;
+
+        &__icon {
+            margin-right: 17px;
+        }
+    }
+}
+
+.explore__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-grey;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        padding: 30px 30px 0 30px;
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
     }
 
-    &__location i {
-        margin-right: 17px;
+    &__caption {
+        text-align: center;
+        margin: 10px 0 27px 0;
+        font-weight: 300;
+    }
+
+    &__button {
+        margin-bottom: 57px;
     }
 }
