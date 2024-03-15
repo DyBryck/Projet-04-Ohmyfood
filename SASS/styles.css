@@ -1,5 +1,5 @@
 .button {
-  width: 218px;
+  width: 70%;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -162,12 +162,20 @@ a {
 }
 .restaurants__section__card__info__title {
   margin: 0;
+  font-size: 18px;
+  font-weight: 700;
 }
 .restaurants__section__card__info__location {
   margin: 5px 0 0 0;
+  font-size: 17px;
+  font-weight: 300;
 }
 .restaurants__section__card__info__icon {
   margin-right: 10px;
+}
+.restaurants__section__card__info__icon:hover {
+  color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .restaurants__section__card__new {
   display: flex;
@@ -203,6 +211,9 @@ a {
 .footer__list__element {
   font-weight: 500;
   margin-top: 7px;
+}
+.footer__list__element--thiner {
+  font-weight: 300;
 }
 .footer__list__element__icon {
   margin-right: 11px;
