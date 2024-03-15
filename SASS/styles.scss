@@ -1,9 +1,5 @@
 @import "./color", "./button";
 
-img {
-    width: 30%;
-}
-
 body {
     margin: 0 auto;
     font-family: 'Roboto';
@@ -19,6 +15,12 @@ body {
 .title {
     font-size: 24px;
     font-weight: 700;
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
 }
 
 .header {
@@ -131,4 +133,54 @@ body {
 
 .restaurants__section {
     background-color: $light-grey;
+    padding: 30px 20px 50px 20px;
+
+    &__card {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        border-radius: 15px;
+
+        & img {
+            height: 150px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+
+            &__title {
+                margin: 0;
+            }
+
+            &__location {
+                margin: 5px 0 0 0;
+            }
+
+            &__icon {
+                margin-right: 10px;
+            }
+        }
+
+        &__new {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: $light-green;
+            color: $green;
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            right: 33px;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 10px 0 0 0;
+        }
+    }
 }
