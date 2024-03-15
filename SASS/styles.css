@@ -1,3 +1,18 @@
+.button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: white;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 13px 18.75px;
+}
+
+.button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
 body {
   max-width: 767px;
   margin: 0 auto;
@@ -27,4 +42,7 @@ img {
   align-items: center;
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.header__location i {
+  margin-right: 17px;
 }/*# sourceMappingURL=styles.css.map */
