@@ -26,16 +26,21 @@ body__container {
   box-sizing: border-box;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-}
-
 img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .header__logo {
@@ -178,4 +183,27 @@ img {
   font-size: 15px;
   font-weight: 500;
   margin: 10px 0 0 0;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px 25px;
+}
+.footer__logo {
+  font-size: 18px;
+  font-family: "Shrikhand";
+  font-weight: 400;
+  margin: 0;
+}
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+}
+.footer__list__element {
+  font-weight: 500;
+  margin-top: 7px;
+}
+.footer__list__element__icon {
+  margin-right: 11px;
 }/*# sourceMappingURL=styles.css.map */
