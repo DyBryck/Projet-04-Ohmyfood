@@ -76,3 +76,59 @@ body {
         margin-bottom: 57px;
     }
 }
+
+.fonctionnement__section {
+    padding: 48px 20px 38px 20px;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        counter-reset: item;
+        padding-left: 10px;
+
+        &__element {
+            position: relative;
+            counter-increment: item;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            background-color: $light-grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 73px;
+            margin-top: 25px;
+            font-weight: 500;
+
+            &::before {
+                content: counter(item);
+                color: white;
+                background-color: $purple;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                left: -10px;
+            }
+
+            &:hover &__icon {
+                color: $purple;
+            }
+
+            &__icon {
+                margin-right: 27px;
+                color: #7E7E7E;
+            }
+        }
+    }
+}
+
+.restaurants__section {
+    background-color: $light-grey;
+}
