@@ -10,20 +10,17 @@
   font-size: 16px;
   font-weight: 500;
 }
+.button--smaller {
+  width: 60%;
+}
 
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   font-family: "Roboto";
-}
-body__container {
-  width: 100%;
-  max-width: 767px;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 img {
@@ -128,7 +125,7 @@ a {
   display: flex;
   justify-content: center;
   position: absolute;
-  left: -10px;
+  left: -12px;
 }
 .fonctionnement__section__list__element:hover .fonctionnement__section__list__element__icon {
   color: #9356DC;
@@ -216,5 +213,6 @@ a {
   font-weight: 300;
 }
 .footer__list__element__icon {
-  margin-right: 11px;
+  margin-right: 20px;
+  width: 11px;
 }/*# sourceMappingURL=styles.css.map */

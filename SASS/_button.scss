@@ -11,6 +11,10 @@
     padding: 13px 18.75px;
     font-size: 16px;
     font-weight: 500;
+
+    &--smaller {
+        width: 60%;
+    }
 }
 
 .button:hover {
