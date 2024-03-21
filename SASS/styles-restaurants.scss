@@ -3,13 +3,6 @@
 body {
     margin: 0 auto;
     font-family: 'Roboto';
-
-    &__container {
-        width: 100%;
-        max-width: 767px;
-        padding: 0;
-        box-sizing: border-box;
-    }
 }
 
 .photo__restaurant {
@@ -46,6 +39,13 @@ a {
     }
 }
 
+@media (min-width: 1440px) {
+    .menu__container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .menu {
     background-color: $light-grey;
     display: flex;
@@ -53,8 +53,14 @@ a {
     align-items: center;
     padding: 30px 13px;
     border-radius: 30px 30px 0 0;
-    margin-top: -80px;
+    margin-top: -50px;
     position: relative;
+
+    @media (min-width: 1440px) {
+        width: 60%;
+        padding: 40px 200px;
+        justify-content: center;
+    }
 
     &__restaurant {
         display: flex;
@@ -63,11 +69,19 @@ a {
         align-items: center;
         width: 100%;
 
+        @media (min-width: 1440px) {
+            justify-content: center;
+        }
+
         &__name {
             font-family: 'Shrikhand';
             font-size: 28px;
             font-weight: 400;
             margin: 0;
+
+            @media (min-width: 1440px) {
+                margin-right: 24px;
+            }
         }
 
         &__icon {
@@ -81,6 +95,10 @@ a {
     &__section {
         width: 100%;
         margin-top: 40px;
+
+        @media (min-width: 1440px) {
+            width: 50%;
+        }
 
         &__title {
             text-transform: uppercase;
@@ -106,6 +124,10 @@ a {
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
             padding: 15px;
             margin-bottom: 12px;
+
+            @media (min-width: 1440px) {
+                width: 634px;
+            }
 
             &__text {
                 &__title {
@@ -139,20 +161,41 @@ a {
     color: white;
     padding: 20px 25px;
 
+    @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
     &__logo {
         font-size: 18px;
         font-family: 'Shrikhand';
         font-weight: 400;
         margin: 0;
+
+        @media (min-width: 1440px) {
+            margin: 0 30px 5px 100px;
+            display: flex;
+            align-self: flex-end;
+        }
     }
 
     &__list {
         list-style-type: none;
         padding: 0;
 
+        @media (min-width: 1440px) {
+            display: flex;
+            margin: 40px 0 10px 0;
+        }
+
         &__element {
             font-weight: 500;
             margin-top: 7px;
+
+            @media (min-width: 1440px) {
+                margin-left: 30px;
+            }
 
             &--thiner {
                 font-weight: 300;

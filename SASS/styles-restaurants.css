@@ -22,12 +22,6 @@ body {
   margin: 0 auto;
   font-family: "Roboto";
 }
-body__container {
-  width: 100%;
-  max-width: 767px;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .photo__restaurant {
   -o-object-fit: cover;
@@ -62,6 +56,12 @@ a {
   top: 30px;
 }
 
+@media (min-width: 1440px) {
+  .menu__container {
+    display: flex;
+    justify-content: center;
+  }
+}
 .menu {
   background-color: #F6F6F6;
   display: flex;
@@ -69,8 +69,15 @@ a {
   align-items: center;
   padding: 30px 13px;
   border-radius: 30px 30px 0 0;
-  margin-top: -80px;
+  margin-top: -50px;
   position: relative;
+}
+@media (min-width: 1440px) {
+  .menu {
+    width: 60%;
+    padding: 40px 200px;
+    justify-content: center;
+  }
 }
 .menu__restaurant {
   display: flex;
@@ -79,11 +86,21 @@ a {
   align-items: center;
   width: 100%;
 }
+@media (min-width: 1440px) {
+  .menu__restaurant {
+    justify-content: center;
+  }
+}
 .menu__restaurant__name {
   font-family: "Shrikhand";
   font-size: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (min-width: 1440px) {
+  .menu__restaurant__name {
+    margin-right: 24px;
+  }
 }
 .menu__restaurant__icon {
   height: 21px;
@@ -94,6 +111,11 @@ a {
 .menu__section {
   width: 100%;
   margin-top: 40px;
+}
+@media (min-width: 1440px) {
+  .menu__section {
+    width: 50%;
+  }
 }
 .menu__section__title {
   text-transform: uppercase;
@@ -117,6 +139,11 @@ a {
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   padding: 15px;
   margin-bottom: 12px;
+}
+@media (min-width: 1440px) {
+  .menu__section__card {
+    width: 634px;
+  }
 }
 .menu__section__card__text__title {
   font-size: 18px;
@@ -143,19 +170,44 @@ a {
   color: white;
   padding: 20px 25px;
 }
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
 .footer__logo {
   font-size: 18px;
   font-family: "Shrikhand";
   font-weight: 400;
   margin: 0;
 }
+@media (min-width: 1440px) {
+  .footer__logo {
+    margin: 0 30px 5px 100px;
+    display: flex;
+    align-self: flex-end;
+  }
+}
 .footer__list {
   list-style-type: none;
   padding: 0;
 }
+@media (min-width: 1440px) {
+  .footer__list {
+    display: flex;
+    margin: 40px 0 10px 0;
+  }
+}
 .footer__list__element {
   font-weight: 500;
   margin-top: 7px;
+}
+@media (min-width: 1440px) {
+  .footer__list__element {
+    margin-left: 30px;
+  }
 }
 .footer__list__element--thiner {
   font-weight: 300;
