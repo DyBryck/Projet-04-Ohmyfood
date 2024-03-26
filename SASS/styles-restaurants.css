@@ -16,11 +16,18 @@
 
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  cursor: pointer;
+}
+
+.like__button {
+  margin-right: 20px;
 }
 
 body {
   margin: 0 auto;
   font-family: "Roboto";
+  max-width: 1440px;
 }
 
 .photo__restaurant {
@@ -62,6 +69,33 @@ a {
     justify-content: center;
   }
 }
+.entrees,
+.plats,
+.desserts {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out 2s forwards;
+}
+
+.entrees {
+  animation-delay: 1s;
+}
+
+.plats {
+  animation-delay: 2s;
+}
+
+.desserts {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu {
   background-color: #F6F6F6;
   display: flex;
@@ -74,7 +108,7 @@ a {
 }
 @media (min-width: 1440px) {
   .menu {
-    width: 60%;
+    width: 55%;
     padding: 40px 200px;
     justify-content: center;
   }
@@ -96,11 +130,6 @@ a {
   font-size: 28px;
   font-weight: 400;
   margin: 0;
-}
-@media (min-width: 1440px) {
-  .menu__restaurant__name {
-    margin-right: 24px;
-  }
 }
 .menu__restaurant__icon {
   height: 21px;
@@ -137,8 +166,19 @@ a {
   align-items: flex-end;
   border-radius: 15px;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  padding: 15px;
   margin-bottom: 12px;
+  height: 69px;
+  overflow: hidden;
+}
+.menu__section__card__content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 13.5px;
+}
+.menu__section__card:hover .animation-check {
+  margin-right: 0;
 }
 @media (min-width: 1440px) {
   .menu__section__card {
@@ -159,6 +199,22 @@ a {
   font-size: 15px;
   font-weight: 700;
   margin: 0;
+}
+
+.animation-check {
+  height: 100%;
+  width: 59px;
+  margin-right: -60px;
+  transition: 1s;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-check__icon {
+  color: white;
+  width: 20px;
+  height: 20px;
 }
 
 .button {
@@ -215,4 +271,36 @@ a {
 .footer__list__element__icon {
   margin-right: 20px;
   width: 11px;
+}
+
+.heart-container {
+  position: absolute;
+  top: 4.5%;
+  left: 65%;
+}
+
+.empty-heart {
+  display: block;
+}
+
+.full-heart {
+  display: none;
+}
+
+.heart-container:hover .empty-heart {
+  display: none;
+}
+
+.heart-container:hover .full-heart {
+  display: block;
+}
+
+.heart-gradient {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 2s ease;
+}
+
+.heart-gradient:hover {
+  opacity: 1;
 }/*# sourceMappingURL=styles-restaurants.css.map */

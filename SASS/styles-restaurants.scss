@@ -3,6 +3,7 @@
 body {
     margin: 0 auto;
     font-family: 'Roboto';
+    max-width: 1440px;
 }
 
 .photo__restaurant {
@@ -46,6 +47,35 @@ a {
     }
 }
 
+.entrees,
+.plats,
+.desserts {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out 2s forwards;
+}
+
+.entrees {
+    animation-delay: 1s;
+}
+
+.plats {
+    animation-delay: 2s;
+}
+
+.desserts {
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .menu {
     background-color: $light-grey;
     display: flex;
@@ -57,7 +87,7 @@ a {
     position: relative;
 
     @media (min-width: 1440px) {
-        width: 60%;
+        width: 55%;
         padding: 40px 200px;
         justify-content: center;
     }
@@ -78,10 +108,6 @@ a {
             font-size: 28px;
             font-weight: 400;
             margin: 0;
-
-            @media (min-width: 1440px) {
-                margin-right: 24px;
-            }
         }
 
         &__icon {
@@ -122,8 +148,21 @@ a {
             align-items: flex-end;
             border-radius: 15px;
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-            padding: 15px;
             margin-bottom: 12px;
+            height: 69px;
+            overflow: hidden;
+
+            &__content {
+                display: flex;
+                flex: 1;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 15px 13.5px;
+            }
+
+            &:hover .animation-check {
+                margin-right: 0;
+            }
 
             @media (min-width: 1440px) {
                 width: 634px;
@@ -149,6 +188,23 @@ a {
                 }
             }
         }
+    }
+}
+
+.animation-check {
+    height: 100%;
+    width: 59px;
+    margin-right: -60px;
+    transition: 1s;
+    background-color: $light-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        color: white;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -207,4 +263,37 @@ a {
             }
         }
     }
+}
+
+.heart-container {
+    position: absolute;
+    top: 4.5%;
+    left: 65%;
+}
+
+.empty-heart {
+    display: block;
+}
+
+.full-heart {
+    display: none;
+}
+
+.heart-container:hover .empty-heart {
+    display: none;
+}
+
+.heart-container:hover .full-heart {
+    display: block;
+}
+
+.heart-gradient {
+    opacity: 0;
+    display: inline-block;
+    -webkit-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+}
+
+.heart-gradient:hover {
+    opacity: 1;
 }
