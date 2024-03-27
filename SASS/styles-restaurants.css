@@ -53,7 +53,7 @@ a {
 }
 .header__logo {
   font-family: "Shrikhand";
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
   margin: 0;
 }
@@ -110,24 +110,24 @@ a {
   .menu {
     width: 55%;
     padding: 40px 200px;
-    justify-content: center;
   }
 }
 .menu__restaurant {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  position: relative;
+  align-self: flex-start;
 }
 @media (min-width: 1440px) {
   .menu__restaurant {
+    width: 100%;
     justify-content: center;
   }
 }
 .menu__restaurant__name {
   font-family: "Shrikhand";
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   margin: 0;
 }
@@ -146,9 +146,17 @@ a {
     width: 50%;
   }
 }
+.menu__section__container {
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  .menu__section__container {
+    width: unset;
+  }
+}
 .menu__section__title {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   margin: 0;
 }
@@ -186,17 +194,17 @@ a {
   }
 }
 .menu__section__card__text__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   margin: 0 0 5px 0;
 }
 .menu__section__card__text__details {
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: 300;
   margin: 0;
 }
 .menu__section__card__text__price {
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: 700;
   margin: 0;
 }
@@ -205,7 +213,7 @@ a {
   height: 100%;
   width: 59px;
   margin-right: -60px;
-  transition: 1s;
+  transition: 1s ease-in-out;
   background-color: #99E2D0;
   display: flex;
   align-items: center;
@@ -234,7 +242,7 @@ a {
   }
 }
 .footer__logo {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Shrikhand";
   font-weight: 400;
   margin: 0;
@@ -275,8 +283,13 @@ a {
 
 .heart-container {
   position: absolute;
-  top: 4.5%;
-  left: 65%;
+  top: 10px;
+  left: 105%;
+}
+@media (min-width: 1440px) {
+  .heart-container {
+    left: 70%;
+  }
 }
 
 .empty-heart {
