@@ -1,8 +1,6 @@
 @import './color';
 
 .button {
-    width: 218px;
-    height: 50px;
     border-radius: 25px;
     background: $gradient-button;
     color: white;
@@ -11,6 +9,7 @@
     padding: 13px 18.75px;
     font-size: 16px;
     font-weight: 500;
+    margin-bottom: 50px;
 
     &--smaller {
         width: 186px;
