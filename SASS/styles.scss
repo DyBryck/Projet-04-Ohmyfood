@@ -395,35 +395,26 @@ a {
     }
 }
 
-.heart-container {
-    position: absolute;
-    right: 1rem;
-    top: 80%;
+.fa-heart {
+    font-size: 30px;
 }
 
-.empty-heart {
-    display: block;
+.content__heart__empty {
+    position: relative;
+    left: 34px;
 }
 
-.full-heart {
-    display: none;
-}
-
-.heart-container:hover .empty-heart {
-    display: none;
-}
-
-.heart-container:hover .full-heart {
-    display: block;
-}
-
-.heart-gradient {
+.content__heart__fill {
+    height: 30px;
+    width: 30px;
+    position: relative;
     opacity: 0;
-    display: inline-block;
-    -webkit-transition: opacity 2s ease;
-    transition: opacity 2s ease;
-}
+    color: transparent;
+    transition: opacity 0.5s ease;
+    background: linear-gradient(to bottom, $purple, pink);
+    background-clip: text;
 
-.heart-gradient:hover {
-    opacity: 1;
+    &:hover {
+        opacity: 1;
+    }
 }

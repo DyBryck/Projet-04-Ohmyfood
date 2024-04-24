@@ -187,6 +187,7 @@ a {
 }
 .menu__section__card:hover .animation-check {
   margin-right: 0;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .menu__section__card {
@@ -281,39 +282,26 @@ a {
   width: 11px;
 }
 
-.heart-container {
-  position: absolute;
-  top: 10px;
-  left: 105%;
-}
-@media (min-width: 1440px) {
-  .heart-container {
-    left: 70%;
-  }
+.fa-heart {
+  font-size: 30px;
 }
 
-.empty-heart {
-  display: block;
+.content__heart__empty {
+  position: relative;
+  left: 34px;
 }
 
-.full-heart {
-  display: none;
-}
-
-.heart-container:hover .empty-heart {
-  display: none;
-}
-
-.heart-container:hover .full-heart {
-  display: block;
-}
-
-.heart-gradient {
+.content__heart__fill {
+  height: 30px;
+  width: 30px;
+  position: relative;
   opacity: 0;
-  display: inline-block;
-  transition: opacity 2s ease;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to bottom, #9356DC, pink);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
-
-.heart-gradient:hover {
+.content__heart__fill:hover {
   opacity: 1;
 }/*# sourceMappingURL=styles-restaurants.css.map */
