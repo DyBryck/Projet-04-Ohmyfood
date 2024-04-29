@@ -197,11 +197,19 @@ a {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0 0 5px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .menu__section__card__text__details {
   font-size: 0.938rem;
   font-weight: 300;
   margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .menu__section__card__text__price {
   font-size: 0.938rem;
