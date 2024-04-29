@@ -47,7 +47,7 @@ html {
 
     100% {
         opacity: 0;
-        z-index: -1;
+        display: none;
     }
 }
 
@@ -311,15 +311,6 @@ a {
                 margin: 5px 0 0 0;
                 font-size: 17px;
                 font-weight: 300;
-            }
-
-            &__icon {
-                margin-right: 10px;
-            }
-
-            &__icon:hover {
-                color: $gradient-button;
-                background-color: $gradient-button;
             }
         }
 
