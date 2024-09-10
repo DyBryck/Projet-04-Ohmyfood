@@ -31,6 +31,7 @@ html {
   margin: 0 auto;
   font-family: "Roboto";
   max-width: 1440px;
+  background-color: white;
 }
 .body__container {
   opacity: 0;
