@@ -1,307 +1,309 @@
-@import './button', './color';
+@import "./button", "./color";
 
 body {
-    margin: 0 auto;
-    font-family: 'Roboto';
-    max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Roboto";
+  max-width: 1440px;
 }
 
 .photo__restaurant {
-    object-fit: cover;
-    width: 100%;
-    height: 275px;
-    z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+  z-index: -1;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 89px;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 89px;
+  position: relative;
 
-    &__logo {
-        font-family: 'Shrikhand';
-        font-size: 1.875rem;
-        text-align: center;
-        margin: 0;
-    }
+  &__logo {
+    font-family: "Shrikhand";
+    font-size: 1.875rem;
+    text-align: center;
+    margin: 0;
+  }
 
-    &__arrow {
-        position: absolute;
-        left: 23px;
-        top: 30px;
-    }
+  &__arrow {
+    position: absolute;
+    left: 23px;
+    top: 30px;
+  }
 }
 
 @media (min-width: 1440px) {
-    .menu__container {
-        display: flex;
-        justify-content: center;
-    }
+  .menu__container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .entrees,
 .plats,
 .desserts {
-    opacity: 0;
-    animation: fadeIn 0.3s ease-out 2s forwards;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out 2s forwards;
 }
 
 .entrees {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .plats {
-    animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .desserts {
-    animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .menu {
-    background-color: $light-grey;
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 13px;
+  border-radius: 30px 30px 0 0;
+  margin-top: -50px;
+  position: relative;
+
+  @media (min-width: 1440px) {
+    width: 55%;
+    padding: 40px 200px;
+  }
+
+  &__restaurant {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 30px 13px;
-    border-radius: 30px 30px 0 0;
-    margin-top: -50px;
     position: relative;
+    align-self: flex-start;
 
     @media (min-width: 1440px) {
-        width: 55%;
-        padding: 40px 200px;
+      width: 100%;
+      justify-content: center;
     }
 
-    &__restaurant {
+    &__name {
+      font-family: "Shrikhand";
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    &__icon {
+      height: 21px;
+      width: 22px;
+      position: inherit;
+      margin-right: 20px;
+    }
+  }
+
+  &__section {
+    width: 100%;
+    margin-top: 40px;
+
+    @media (min-width: 1440px) {
+      width: 50%;
+    }
+
+    &__container {
+      width: 100%;
+
+      @media (min-width: 1440px) {
+        width: unset;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    &__border {
+      height: 3px;
+      width: 40px;
+      background-color: $light-green;
+      margin: 5px 0 12px 0;
+    }
+
+    &__card {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-radius: 15px;
+      box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+      margin-bottom: 12px;
+      height: 69px;
+      overflow: hidden;
+
+      &__content {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        align-self: flex-start;
+        flex: 1;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 15px 13.5px;
+      }
 
-        @media (min-width: 1440px) {
-            width: 100%;
-            justify-content: center;
-        }
+      &:hover .animation-check {
+        margin-right: 0;
+        cursor: pointer;
+      }
 
-        &__name {
-            font-family: 'Shrikhand';
-            font-size: 1.75rem;
-            font-weight: 400;
-            margin: 0;
-        }
+      @media (min-width: 1440px) {
+        width: 634px;
+      }
 
-        &__icon {
-            height: 21px;
-            width: 22px;
-            position: inherit;
-            margin-right: 20px;
-        }
-    }
-
-    &__section {
-        width: 100%;
-        margin-top: 40px;
-
-        @media (min-width: 1440px) {
-            width: 50%;
-        }
-
-        &__container {
-            width: 100%;
-
-            @media (min-width: 1440px) {
-                width: unset;
-            }
-        }
-
+      &__text {
         &__title {
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 300;
-            margin: 0;
+          font-size: 1.125rem;
+          font-weight: 500;
+          margin: 0 0 5px 0;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
         }
 
-        &__border {
-            height: 3px;
-            width: 40px;
-            background-color: $light-green;
-            margin: 5px 0 12px 0;
+        &__details {
+          font-size: 0.938rem;
+          font-weight: 300;
+          margin: 0;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
         }
 
-        &__card {
-            background-color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-radius: 15px;
-            box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-            margin-bottom: 12px;
-            height: 69px;
-            overflow: hidden;
-
-            &__content {
-                display: flex;
-                flex: 1;
-                justify-content: space-between;
-                align-items: flex-end;
-                padding: 15px 13.5px;
-            }
-
-            &:hover .animation-check {
-                margin-right: 0;
-                cursor: pointer;
-            }
-
-            @media (min-width: 1440px) {
-                width: 634px;
-            }
-
-            &__text {
-                &__title {
-                    font-size: 1.125rem;
-                    font-weight: 500;
-                    margin: 0 0 5px 0;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                }
-
-                &__details {
-                    font-size: 0.938rem;
-                    font-weight: 300;
-                    margin: 0;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                }
-
-                &__price {
-                    font-size: 0.938rem;
-                    font-weight: 700;
-                    margin: 0;
-                }
-            }
+        &__price {
+          font-size: 0.938rem;
+          font-weight: 700;
+          margin: 0;
         }
+      }
     }
+  }
 }
 
 .animation-check {
-    height: 100%;
-    width: 59px;
-    margin-right: -60px;
-    transition: 1s ease-in-out;
-    background-color: $light-green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  width: 59px;
+  margin-right: -60px;
+  transition: 1s ease-in-out;
+  background-color: $light-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &__icon {
-        color: white;
-        width: 20px;
-        height: 20px;
-    }
+  &__icon {
+    color: white;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .button {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .footer {
-    background-color: $grey;
-    color: white;
-    padding: 20px 25px;
+  background-color: $grey;
+  color: white;
+  padding: 20px 25px;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.125rem;
+    font-family: "Shrikhand";
+    font-weight: 400;
+    margin: 0;
 
     @media (min-width: 1440px) {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
+      margin: 0 30px 5px 100px;
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      margin: 40px 0 10px 0;
     }
 
-    &__logo {
-        font-size: 1.125rem;
-        font-family: 'Shrikhand';
-        font-weight: 400;
-        margin: 0;
+    &__element {
+      font-weight: 500;
+      margin-top: 7px;
 
-        @media (min-width: 1440px) {
-            margin: 0 30px 5px 100px;
-            display: flex;
-            align-self: flex-end;
-        }
+      @media (min-width: 1440px) {
+        margin-left: 30px;
+      }
+
+      &--thiner {
+        font-weight: 300;
+      }
+
+      &__icon {
+        margin-right: 20px;
+        width: 11px;
+      }
     }
-
-    &__list {
-        list-style-type: none;
-        padding: 0;
-
-        @media (min-width: 1440px) {
-            display: flex;
-            margin: 40px 0 10px 0;
-        }
-
-        &__element {
-            font-weight: 500;
-            margin-top: 7px;
-
-            @media (min-width: 1440px) {
-                margin-left: 30px;
-            }
-
-            &--thiner {
-                font-weight: 300;
-            }
-
-            &__icon {
-                margin-right: 20px;
-                width: 11px;
-            }
-        }
-    }
+  }
 }
 
 .fa-heart {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .content__heart__empty {
-    position: relative;
-    left: 34px;
+  position: relative;
+  left: 34px;
 }
 
 .content__heart__fill {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    opacity: 0;
-    color: transparent;
-    transition: opacity 0.5s ease;
-    background: linear-gradient(to bottom, $purple, pink);
-    background-clip: text;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  opacity: 0;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to bottom, $purple, pink);
+  background-clip: text;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
